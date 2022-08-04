@@ -1,0 +1,20 @@
+### Project ###
+buildSrc/
+wiki/
+
+### Gradle ###
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+
+### Build ###
+build/
+
+### IntelliJ IDEA ###
+!.idea
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+
+### Mac OS ###
+.DS_Store
