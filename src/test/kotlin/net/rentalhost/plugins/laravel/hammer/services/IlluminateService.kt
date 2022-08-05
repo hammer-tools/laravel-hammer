@@ -1,4 +1,4 @@
-package net.rentalhost.plugins.services
+package net.rentalhost.plugins.laravel.hammer.services
 
 object IlluminateService {
     val eloquentFiles = listOf(

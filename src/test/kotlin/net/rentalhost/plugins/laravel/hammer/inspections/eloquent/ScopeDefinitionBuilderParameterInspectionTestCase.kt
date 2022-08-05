@@ -1,7 +1,7 @@
 package net.rentalhost.plugins.laravel.hammer.inspections.eloquent
 
-import net.rentalhost.plugins.services.IlluminateService
-import net.rentalhost.plugins.services.TestCase
+import net.rentalhost.plugins.hammer.services.TestCase
+import net.rentalhost.plugins.laravel.hammer.services.IlluminateService
 
 class ScopeDefinitionBuilderParameterInspectionTestCase: TestCase() {
     fun testAll(): Unit = testInspection(

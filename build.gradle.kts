@@ -10,6 +10,7 @@ plugins {
 
 dependencies {
     implementation("io.sentry:sentry:6.3.0")
+    implementation(":hammer-tools-0.1.0")
 }
 
 group = prop("pluginId")
@@ -17,6 +18,8 @@ version = prop("pluginVersion")
 
 repositories {
     mavenCentral()
+
+    flatDir { dirs("hammerTools/build/libs") }
 }
 
 apply {
