@@ -1,1 +1,1 @@
-rootProject.name = "php-hammer"
+rootProject.name = "laravel-hammer"

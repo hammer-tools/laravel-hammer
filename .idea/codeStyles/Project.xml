@@ -21,7 +21,7 @@
         <package name="" withSubpackages="true" static="true" />
       </value>
     </option>
-    <option name="RIGHT_MARGIN" value="180" />
+    <option name="RIGHT_MARGIN" value="240" />
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="true" />
     <option name="WRAP_COMMENTS" value="true" />
     <HTMLCodeStyleSettings>

@@ -77,6 +77,6 @@ abstract class TestCase: BasePlatformTestCase() {
     }
 
     companion object {
-        private const val classBaseLength = "net.rentalhost.plugins.php.hammer".length
+        private const val classBaseLength = "net.rentalhost.plugins.laravel.hammer".length
     }
 }

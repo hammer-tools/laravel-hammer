@@ -89,7 +89,7 @@
             <properties>
               <font style="1"/>
               <icon value="META-INF/pluginIcon.png"/>
-              <text value="PHP Hammer "/>
+              <text value="Laravel Hammer "/>
             </properties>
           </component>
           <component id="a0a19" class="javax.swing.JLabel" binding="labelVersion">

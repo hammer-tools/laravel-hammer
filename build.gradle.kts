@@ -28,7 +28,12 @@ intellij {
     version.set(prop("platformVersion"))
     type.set("PS")
 
-    plugins.set(listOf("com.jetbrains.php:${prop("platformPhpBuild")}"))
+    plugins.set(
+        listOf(
+            "com.jetbrains.php:${prop("platformPhpBuild")}",
+            "com.jetbrains.php.blade:${prop("platformPhpBuild")}"
+        )
+    )
 }
 
 tasks {

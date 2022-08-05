@@ -14,7 +14,7 @@ import net.rentalhost.plugins.services.UrlService
 import java.time.ZonedDateTime
 
 internal class PluginUpdateListener: ProjectManagerListener {
-    private val plugin: IdeaPluginDescriptor = PluginManagerCore.getPlugin(PluginId.findId("net.rentalhost.plugins.php.hammer"))!!
+    private val plugin: IdeaPluginDescriptor = PluginManagerCore.getPlugin(PluginId.findId("net.rentalhost.plugins.laravel.hammer"))!!
 
     private val tripleHome = NotificationItem("home", "project home", "home", UrlService.homeUrl)
     private val tripleChangelog = NotificationItem("changelog", "changelog", UrlService.changelogUrl)

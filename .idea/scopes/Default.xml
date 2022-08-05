@@ -1,3 +1,4 @@
 <component name="DependencyValidationManager">
-  <scope name="Default" pattern="file[php-hammer.main]:kotlin//net//rentalhost//plugins//*||file[php-hammer.main]:resources/inspectionDescriptions//*||file[php-hammer.main]:resources/META-INF/plugin.xml||file[php-hammer.test]:kotlin//net//rentalhost//plugins//*||file[php-hammer.test]:resources//*||file[php-hammer]:wiki/Inspections.md||file[php-hammer.main]:java//*" />
+  <scope name="Default"
+         pattern="file[laravel-hammer.main]:kotlin//net//rentalhost//plugins//*||file[laravel-hammer.main]:resources/inspectionDescriptions//*||file[laravel-hammer.main]:resources/META-INF/plugin.xml||file[laravel-hammer.test]:kotlin//net//rentalhost//plugins//*||file[laravel-hammer.test]:resources//*||file[laravel-hammer]:wiki/Inspections.md||file[laravel-hammer.main]:java//*||file[laravel-hammer.main]:*/||file[laravel-hammer.test]:*/" />
 </component>

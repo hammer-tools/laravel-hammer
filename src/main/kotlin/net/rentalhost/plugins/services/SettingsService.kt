@@ -9,7 +9,7 @@ import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import net.rentalhost.plugins.services.SettingsService.Companion.State as SettingsState
 
-@State(name = "PHPHammerState", storages = [Storage("php-hammer.state.xml")])
+@State(name = "LaravelHammerState", storages = [Storage("laravel-hammer.state.xml")])
 class SettingsService: PersistentStateComponent<SettingsState> {
     companion object {
         fun getInstance(): SettingsService =

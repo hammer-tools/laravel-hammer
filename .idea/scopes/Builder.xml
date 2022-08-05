@@ -1,3 +1,4 @@
 <component name="DependencyValidationManager">
-  <scope name="Builder" pattern="file[php-hammer]:CHANGELOG.md||file[php-hammer]:wiki/Inspections.md||file[php-hammer.buildSrc.main]:kotlin//*||file[php-hammer.buildSrc]:build.gradle.kts||file[php-hammer.buildSrc.main]:resources//*" />
+  <scope name="Builder"
+         pattern="file[laravel-hammer]:CHANGELOG.md||file[laravel-hammer]:wiki/Inspections.md||file[laravel-hammer.buildSrc.main]:kotlin//*||file[laravel-hammer.buildSrc]:build.gradle.kts||file[laravel-hammer.buildSrc.main]:resources//*" />
 </component>
