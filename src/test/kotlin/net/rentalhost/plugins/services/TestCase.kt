@@ -19,13 +19,14 @@ abstract class TestCase: BasePlatformTestCase() {
 
     protected fun <T: PhpInspection?> testInspection(
         inspectionClass: Class<T>,
-        phpSourceSubName: String?,
+        phpSourceName: String,
+        phpSourceSubName: List<String>,
         inspectionSetup: Consumer<T>? = null,
         phpLanguageLevel: PhpLanguageLevel? = null,
         quickFixesEnabled: Boolean? = null
-    ): Unit = testInspection(inspectionClass, listOf(phpSourceSubName), inspectionSetup, phpLanguageLevel, quickFixesEnabled)
+    ): Unit = testInspection(inspectionClass, listOf(phpSourceName, *phpSourceSubName.toTypedArray()), inspectionSetup, phpLanguageLevel, quickFixesEnabled)
 
-    protected fun <T: PhpInspection?> testInspection(
+    private fun <T: PhpInspection?> testInspection(
         inspectionClass: Class<T>,
         phpSourceSubNames: List<String?>? = null,
         inspectionSetup: Consumer<T>? = null,

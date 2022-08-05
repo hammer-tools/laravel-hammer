@@ -63,5 +63,5 @@ class ExceptionService: ErrorReportSubmitter() {
     }
 
     override fun getReportActionText(): String =
-        "Report to PHP Hammer plugin"
+        "Report to Laravel Hammer plugin"
 }
