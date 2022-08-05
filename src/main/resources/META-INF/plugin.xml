@@ -9,7 +9,11 @@
 
     <description><![CDATA[
         <strong>🔨 Laravel Hammer</strong> is a plugin that adds <a href="https://github.com/hammer-tools/laravel-hammer/wiki/Inspections"><strong>1 new
-    inspections</strong></a> to the Laravel framework, including dependencies like Eloquent and Blade, which are not available in PhpStorm natively, including support for quick-fixes.
+    inspections</strong></a> to the Laravel framework, including dependencies like Eloquent and Blade, which are not available in PhpStorm natively, including support for quick-fixes.<br /><br />
+
+<strong>Important:</strong> this plugin is at a very early stage of development and therefore has very few of the intended features.<br /><br />
+
+You can also try the <a href="https://plugins.jetbrains.com/plugin/19515--php-hammer/"><strong>🔨 PHP Hammer</strong></a> sister plugin.
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>

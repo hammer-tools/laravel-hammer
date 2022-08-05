@@ -5,15 +5,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    public function scopeWithoutBuilder(EloquentBuilder $builder)
+    public function scopeWithoutBuilder(\Illuminate\Database\Eloquent\Builder $builder)
     {
     }
 
-    public function scopeWrongBuilder(EloquentBuilder $builder, $dummy)
+    public function scopeWrongBuilder(\Illuminate\Database\Eloquent\Builder $builder, $dummy)
     {
     }
 
-    public function scopeWithoutTypeDeclaration(EloquentBuilder $builder)
+    public function scopeCorrectBuilderButWithNull(\Illuminate\Database\Eloquent\Builder $builder)
+    {
+    }
+
+    public function scopeWithoutTypeDeclaration(\Illuminate\Database\Eloquent\Builder $builder)
     {
     }
 
@@ -21,5 +25,9 @@ class User extends Model
 
     public function scopeCorrectBuilder(EloquentBuilder $builder)
     {
+        $dummy = new class {
+            public function scopeNotReal() {
+            }
+        };
     }
 }

@@ -5,8 +5,12 @@ import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.psi.elements.Method
 import com.jetbrains.php.lang.psi.visitors.PhpElementVisitor
 import net.rentalhost.plugins.extensions.psi.hasTrait
+import net.rentalhost.plugins.extensions.psi.insertBefore
+import net.rentalhost.plugins.extensions.psi.parametersList
+import net.rentalhost.plugins.services.FactoryService
 import net.rentalhost.plugins.services.IlluminateService.Database.Eloquent.Builder
 import net.rentalhost.plugins.services.IlluminateService.Database.Eloquent.Builder.Concerns.HasGlobalScopes
+import net.rentalhost.plugins.services.LocalQuickFixService
 import net.rentalhost.plugins.services.ProblemsHolderService
 
 class ScopeDefinitionBuilderParameterInspection: PhpInspection() {
@@ -24,7 +28,11 @@ class ScopeDefinitionBuilderParameterInspection: PhpInspection() {
                 return ProblemsHolderService.registerProblem(
                     problemsHolder,
                     (method.nameNode ?: return).psi,
-                    "missing first parameter"
+                    "missing first parameter",
+                    LocalQuickFixService.SimpleReplaceQuickFix(
+                        "Add Builder parameter", method.parametersList() ?: return,
+                        FactoryService.createParameterList(problemsHolder.project, "${Builder.name} \$builder")
+                    )
                 )
             }
 
@@ -35,7 +43,10 @@ class ScopeDefinitionBuilderParameterInspection: PhpInspection() {
                 return ProblemsHolderService.registerProblem(
                     problemsHolder,
                     methodParameter,
-                    "missing first parameter type"
+                    "missing first parameter type",
+                    LocalQuickFixService.SimpleInlineQuickFix("Set parameter type to Builder") {
+                        methodParameter.firstChild.insertBefore(FactoryService.createParameterType(problemsHolder.project, Builder.name))
+                    }
                 )
             }
 
@@ -43,7 +54,11 @@ class ScopeDefinitionBuilderParameterInspection: PhpInspection() {
                 return ProblemsHolderService.registerProblem(
                     problemsHolder,
                     methodParameter.firstChild,
-                    "wrong first parameter type"
+                    "wrong first parameter type",
+                    LocalQuickFixService.SimpleReplaceQuickFix(
+                        "Replace parameter type to Builder",
+                        FactoryService.createParameterType(problemsHolder.project, Builder.name)
+                    )
                 )
             }
         }
