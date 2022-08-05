@@ -21,9 +21,7 @@
         <!-- Plugin -->
         <applicationService serviceImplementation="net.rentalhost.plugins.laravel.hammer.services.SettingsService" />
 
-        <notificationGroup id="net.rentalhost.plugins.notification.INSTALLED" displayType="STICKY_BALLOON" />
-        <notificationGroup id="net.rentalhost.plugins.notification.UPDATED" displayType="STICKY_BALLOON" />
-        <notificationGroup id="net.rentalhost.plugins.notification.REVIEW" displayType="STICKY_BALLOON" />
+        <notificationGroup id="net.rentalhost.plugins.laravel.hammer.notifications.PLUGIN_RELATED" displayType="STICKY_BALLOON" />
 
         <errorHandler implementation="net.rentalhost.plugins.laravel.hammer.services.ExceptionService" />
 
