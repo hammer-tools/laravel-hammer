@@ -9,7 +9,7 @@ import net.rentalhost.plugins.hammer.extensions.psi.insertBefore
 import net.rentalhost.plugins.hammer.extensions.psi.parametersList
 import net.rentalhost.plugins.hammer.services.FactoryService
 import net.rentalhost.plugins.laravel.hammer.services.IlluminateService.Database.Eloquent.Builder
-import net.rentalhost.plugins.laravel.hammer.services.IlluminateService.Database.Eloquent.Builder.Concerns.HasGlobalScopes
+import net.rentalhost.plugins.laravel.hammer.services.IlluminateService.Database.Eloquent.Concerns.HasGlobalScopes
 import net.rentalhost.plugins.laravel.hammer.services.ProblemsHolderService
 import net.rentalhost.plugins.laravel.hammer.services.QuickFixService
 
