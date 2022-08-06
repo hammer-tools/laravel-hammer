@@ -8,6 +8,8 @@ class ProjectService: BaseProjectService() {
         var instance: ProjectService = ProjectService()
     }
 
+    override val id: String = "net.rentalhost.plugins.laravel.hammer"
+
     override val name: String = "Laravel Hammer"
 
     override val notificationGroup: String = "net.rentalhost.plugins.laravel.hammer.notifications"

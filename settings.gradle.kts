@@ -1,3 +1,3 @@
 rootProject.name = "laravel-hammer"
 
-includeBuild("hammerTools")
+includeBuild("hammer-tools")

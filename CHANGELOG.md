@@ -15,7 +15,7 @@ and this project adheres to [**Semantic Versioning**](https://semver.org/spec/v2
 
 - **[ScopeDefinitionBuilderParameterInspection]**: implemented ("Query Scope declaration: Builder parameter");
 
-[0.1.0]: https://github.com/hammer-tools/php-hammer/releases/tag/0.1.0
+[0.1.0]: https://github.com/hammer-tools/laravel-hammer/releases/tag/0.1.0
 
-[ScopeDefinitionBuilderParameterInspection]: https://github.com/hammer-tools/php-hammer/wiki/Inspections#user-content-scope-definition-builder-parameter-inspection
+[ScopeDefinitionBuilderParameterInspection]: https://github.com/hammer-tools/laravel-hammer/wiki/Inspections#user-content-scope-definition-builder-parameter-inspection
 
