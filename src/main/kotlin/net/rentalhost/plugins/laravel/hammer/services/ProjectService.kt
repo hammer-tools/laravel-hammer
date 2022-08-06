@@ -25,7 +25,7 @@ class ProjectService: BaseProjectService() {
 
         override val inspectionsUrl: String = "https://github.com/hammer-tools/laravel-hammer/wiki/Inspections"
 
-        override val reviewsUrl: String = "https://plugins.jetbrains.com/plugin/00000--laravel-hammer/reviews/new"
+        override val reviewsUrl: String = "https://plugins.jetbrains.com/plugin/19645--laravel-hammer/reviews/new"
     }
 
     override val settings: SettingsService = SettingsService()
