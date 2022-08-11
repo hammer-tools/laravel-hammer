@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 fun prop(key: String) = project.findProperty(key).toString()
 
 plugins {
@@ -37,18 +35,13 @@ intellij {
     )
 }
 
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
 tasks {
-    java {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_11.toString()
-        }
-    }
-
     build {
         dependsOn("generatePluginXML")
         dependsOn("generateChangelog")
