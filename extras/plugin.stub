@@ -30,6 +30,8 @@
 
         <!-- Components -->
         <gotoDeclarationHandler implementation="net.rentalhost.plugins.laravel.hammer.gotoDeclaration.ScopeHandler" />
+
+        <completion.contributor implementationClass="net.rentalhost.plugins.laravel.hammer.completionContributor.ScopeCompletionContributor" language="PHP" />
     </extensions>
 
     <applicationListeners>
