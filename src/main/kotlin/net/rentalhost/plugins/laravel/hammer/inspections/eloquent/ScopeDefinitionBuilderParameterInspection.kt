@@ -1,6 +1,7 @@
 package net.rentalhost.plugins.laravel.hammer.inspections.eloquent
 
 import com.intellij.codeInspection.ProblemsHolder
+import com.intellij.refactoring.suggested.createSmartPointer
 import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.psi.elements.Method
 import com.jetbrains.php.lang.psi.visitors.PhpElementVisitor
@@ -30,8 +31,8 @@ class ScopeDefinitionBuilderParameterInspection: PhpInspection() {
                     (method.nameNode ?: return).psi,
                     "missing first parameter",
                     QuickFixService.instance.simpleReplace(
-                        "Add Builder parameter", method.parametersList() ?: return,
-                        FactoryService.createParameterList(problemsHolder.project, "${Builder.name} \$builder")
+                        "Add Builder parameter", method.parametersList()?.createSmartPointer() ?: return,
+                        FactoryService.createParameterList(problemsHolder.project, "${Builder.name} \$builder").createSmartPointer()
                     )
                 )
             }
@@ -57,7 +58,7 @@ class ScopeDefinitionBuilderParameterInspection: PhpInspection() {
                     "wrong first parameter type",
                     QuickFixService.instance.simpleReplace(
                         "Replace parameter type to Builder",
-                        FactoryService.createParameterType(problemsHolder.project, Builder.name)
+                        FactoryService.createParameterType(problemsHolder.project, Builder.name).createSmartPointer()
                     )
                 )
             }
