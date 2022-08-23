@@ -27,6 +27,9 @@
 
         <toolWindow id="Laravel Hammer" icon="/META-INF/pluginIcon.png" anchor="right"
                     factoryClass="net.rentalhost.plugins.laravel.hammer.services.SidebarService" />
+
+        <!-- Components -->
+        <gotoDeclarationHandler implementation="net.rentalhost.plugins.laravel.hammer.gotoDeclaration.ScopeHandler" />
     </extensions>
 
     <applicationListeners>

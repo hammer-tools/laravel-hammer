@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>net.rentalhost.plugins.laravel.hammer</id>
-    <name>🔨 Laravel Hammer</name>
+    <name>Laravel Hammer</name>
     <version>0.1.0</version>
 
     <vendor email="david.rodrigues@rentalhost.net">Rentalhost</vendor>
@@ -8,7 +8,7 @@
     <idea-version since-build="221" until-build="222.*" />
 
     <description><![CDATA[
-        <strong>🔨 Laravel Hammer</strong> is a plugin that adds <a href="https://github.com/hammer-tools/laravel-hammer/wiki/Inspections"><strong>1 new
+        <strong>Laravel Hammer</strong> is a plugin that adds <a href="https://github.com/hammer-tools/laravel-hammer/wiki/Inspections"><strong>1 new
     inspections</strong></a> to the Laravel framework, including dependencies like Eloquent and Blade, which are not available in PhpStorm natively, including support for quick-fixes.<br /><br />
 
 <strong>Important:</strong> this plugin is at a very early stage of development and therefore has very few of the intended features.<br /><br />
@@ -40,6 +40,9 @@ You can also try the <a href="https://plugins.jetbrains.com/plugin/19515--php-ha
 
         <toolWindow id="Laravel Hammer" icon="/META-INF/pluginIcon.png" anchor="right"
                     factoryClass="net.rentalhost.plugins.laravel.hammer.services.SidebarService" />
+
+        <!-- Components -->
+        <gotoDeclarationHandler implementation="net.rentalhost.plugins.laravel.hammer.gotoDeclaration.ScopeHandler" />
     </extensions>
 
     <applicationListeners>
