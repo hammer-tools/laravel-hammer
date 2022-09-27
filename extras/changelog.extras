@@ -1,3 +1,4 @@
 0.1.0;important;First public release;
 0.2.0;added;Query Scope: "go to declaration" support;
 0.2.0;added;Query Scope: completion support;
+0.2.0;changed;Minimum supported version raised to 2022.3 due to API changes (EAP 223);

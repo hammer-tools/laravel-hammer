@@ -2,12 +2,12 @@ fun prop(key: String) = project.findProperty(key).toString()
 
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.8.0"
+    id("org.jetbrains.intellij") version "1.9.0"
     id("org.jetbrains.kotlin.jvm") version "1.7.10"
 }
 
 dependencies {
-    implementation("io.sentry:sentry:6.3.0")
+    implementation("io.sentry:sentry:6.4.2")
     implementation(fileTree("hammer-tools/build/libs").also { it.include("*.jar") })
 }
 
@@ -25,7 +25,7 @@ apply {
 intellij {
     pluginName.set(prop("pluginName"))
     version.set(prop("platformVersion"))
-    type.set("PS")
+    type.set("IU")
 
     plugins.set(
         listOf(
@@ -37,7 +37,7 @@ intellij {
 
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 

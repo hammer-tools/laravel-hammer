@@ -1,11 +1,11 @@
 <idea-plugin>
     <id>net.rentalhost.plugins.laravel.hammer</id>
     <name>Laravel Hammer</name>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
 
     <vendor email="david.rodrigues@rentalhost.net">Rentalhost</vendor>
 
-    <idea-version since-build="221" until-build="222.*" />
+    <idea-version since-build="223" until-build="223.*" />
 
     <description><![CDATA[
         <strong>Laravel Hammer</strong> is a plugin that adds <a href="https://github.com/hammer-tools/laravel-hammer/wiki/Inspections"><strong>1 new
@@ -34,6 +34,8 @@ You can also try the <a href="https://plugins.jetbrains.com/plugin/19515--php-ha
         <!-- Plugin -->
         <applicationService serviceImplementation="net.rentalhost.plugins.laravel.hammer.services.SettingsService" />
 
+        <backgroundPostStartupActivity implementation="net.rentalhost.plugins.laravel.hammer.services.PluginUpdateService" />
+
         <notificationGroup id="net.rentalhost.plugins.laravel.hammer.notifications.PLUGIN_RELATED" displayType="STICKY_BALLOON" />
 
         <errorHandler implementation="net.rentalhost.plugins.laravel.hammer.services.ExceptionService" />
@@ -46,10 +48,4 @@ You can also try the <a href="https://plugins.jetbrains.com/plugin/19515--php-ha
 
         <completion.contributor implementationClass="net.rentalhost.plugins.laravel.hammer.completionContributor.ScopeCompletionContributor" language="PHP" />
     </extensions>
-
-    <applicationListeners>
-        <listener activeInHeadlessMode="false"
-                  class="net.rentalhost.plugins.laravel.hammer.services.PluginUpdateService"
-                  topic="com.intellij.openapi.project.ProjectManagerListener" />
-    </applicationListeners>
 </idea-plugin>
