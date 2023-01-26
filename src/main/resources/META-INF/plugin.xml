@@ -1,11 +1,11 @@
 <idea-plugin>
     <id>net.rentalhost.plugins.laravel.hammer</id>
     <name>Laravel Hammer</name>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
 
     <vendor email="david.rodrigues@rentalhost.net">Rentalhost</vendor>
 
-    <idea-version since-build="223" until-build="223.*" />
+    <idea-version since-build="223" until-build="231.*" />
 
     <description><![CDATA[
         <strong>Laravel Hammer</strong> is a plugin that adds <a href="https://github.com/hammer-tools/laravel-hammer/wiki/Inspections"><strong>1 new
