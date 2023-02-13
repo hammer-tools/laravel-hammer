@@ -10,7 +10,7 @@ object IlluminateService {
             }
 
             object Builder {
-                const val name: String = "\\Illuminate\\Database\\Eloquent\\Builder"
+                const val name: String = "\\Illuminate\\Contracts\\Database\\Eloquent\\Builder"
             }
         }
     }
